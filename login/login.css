@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: green;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Hide scrollbar */
+}
+
+.container {
+    width: 300px;
+    margin: 100px auto;
+    text-align: center;
+    animation: slide-up 0.5s ease forwards, person-jump 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Animation for sliding up and person jumping */
+    opacity: 0; /* Initially hidden */
+}
+
+@keyframes slide-up {
+    from {
+        transform: translateY(50px); /* Start 50px below */
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0); /* Slide up to its position */
+        opacity: 1;
+    }
+}
+
+@keyframes person-jump {
+    0% {
+        transform: translateY(0) scaleY(1); /* Start from its position */
+    }
+    20% {
+        transform: translateY(-20px) scaleY(1.1); /* Jump up */
+    }
+    40% {
+        transform: translateY(0) scaleY(1); /* Back to its position */
+    }
+    60% {
+        transform: translateY(-10px) scaleY(1.05); /* Slightly jump up */
+    }
+    80% {
+        transform: translateY(0) scaleY(1); /* Back to its position */
+    }
+    100% {
+        transform: translateY(0) scaleY(1); /* End at its position */
+    }
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #333;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+input[type="email"],
+input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #444;
+    color: #ddd;
+    transition: background-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    background-color: #555;
+}
+
+button {
+    width: calc(100% - 20px);
+    padding: 10px;
+    background-color: green;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: darkgreen;
+}
+
+p {
+    margin-top: 20px;
+    animation: slide-up 0.5s ease forwards; /* Animation for sliding up */
+    opacity: 0; /* Initially hidden */
+}
+
+.person {
+    width: 50px;
+    height: 50px;
+    background-color: green;
+    border-radius: 50%;
+    position: relative;
+    margin: 0 auto;
+    bottom: -50px; /* Initially hidden below the form */
+    animation: person-jump 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Animation for person jumping */
+    opacity: 0; /* Initially hidden */
+}

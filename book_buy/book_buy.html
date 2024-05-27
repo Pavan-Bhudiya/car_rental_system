@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Car</title>
+    <link rel="stylesheet" href="/book_buy/book_buy.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Book Your Car</h2>
+        <form id="booking-form" action="#" method="POST">
+            <div class="form-group">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Address</label>
+                <input type="text" id="address" name="address" required>
+            </div>
+            <div class="form-group">
+                <label for="paymentmethod">Payment Method</label>
+                <select id="paymentmethod" name="paymentmethod" required>
+                    <option value="">Select Payment Method</option>
+                    <option value="card">Credit/Debit Card</option>
+                    <option value="bank">Bank Transfer</option>
+                    <option value="installments">Monthly Installments</option>
+                    <option value="MPESA">MPESA</option>
+                </select>
+            </div>
+            <div class="form-group" id="card-number" style="display: none;">
+                <label for="cardnumber">Card Number</label>
+                <input type="text" id="cardnumber" name="cardnumber" required>
+            </div>
+            <div class="form-group" id="MPESA" style="display: none;">
+                <label for="MPESA">MPESA</label>
+                <input type="tel" id="mpesa" name="MPESA" readonly>
+            </div>
+            <div class="form-group" id="bank-account" style="display: none;">
+                <label for="bankaccount">Bank Account Number</label>
+                <input type="text" id="bankaccount" name="bankaccount" readonly>
+            </div>
+            <div class="form-group" id="installments-group" style="display: none;">
+                <label for="installments">Monthly Installment Amount</label>
+                <input type="number" id="installments" name="installments" min="1" max="10">
+                <label for="installment-years">Number of Years (1-10):</label>
+                <input type="number" id="installment-years" name="installment-years" min="1" max="10">
+            </div>
+
+        </form>
+        <a href="/contact/contact.html" class="buy-now">Buy Now</a>
+        <footer>&copy; Created by Pavan Bhudiya</footer>
+    </div>
+
+    <script src="/book_buy/book_buy.js"></script>
+</body>
+</html>

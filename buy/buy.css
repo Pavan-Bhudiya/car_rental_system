@@ -1,0 +1,129 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: green;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+h2 {
+    text-align: center;
+}
+
+.car-details {
+    display: flex;
+}
+
+.car-image {
+    flex: 1;
+    padding: 20px;
+}
+
+.car-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.car-table {
+    flex: 1;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.car-table.show {
+    opacity: 1;
+}
+
+.car-table th, .car-table td {
+    border: 1px solid green;
+    padding: 10px;
+    text-align: center;
+}
+
+.car-table th {
+    background-color: black;
+    color: green;
+}
+
+.car-table tbody tr:nth-child(even) {
+    background-color: #333;
+}
+
+.car-table tbody tr:hover {
+    background-color: darkgreen;
+    cursor: pointer;
+}
+/* CSS for the navbar */
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    float: left;
+}
+
+.navbar ul li a {
+    display: block;
+    color:darkgreen;
+    text-align: center;
+    font-size: 25px;
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.navbar ul li a:hover {
+    background-color: #4CAF50;
+}
+
+.navbar ul li a.active {
+    background-color: #4CAF50;
+}
+
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
+.buy-now {
+    display: block;
+    width: 150px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: green;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.buy-now:hover {
+    background-color: darkgreen;
+}
+
+.container::before {
+    content: "Green Wheels Car Rental & Sales";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2em;
+    opacity: 0.1;
+    pointer-events: none;
+}

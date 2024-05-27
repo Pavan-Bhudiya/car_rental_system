@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: green;
+    margin: 0;
+    padding: 0;
+}
+
+.dashboard {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.company-name {
+    position: absolute;
+    text-align: center;
+    font-size: 60px; /* Increased font size */
+    color: rgba(0, 255, 0, 0.3); /* Adjusted color */
+    
+}
+
+.option-card {
+    width: 200px;
+    height: 150px;
+    background-color: green;
+    color: black;
+    border-radius: 10px;
+    margin: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+/* CSS for the navbar */
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    float: left;
+}
+
+.navbar ul li a {
+    display: block;
+    color:darkgreen;
+    text-align: center;
+    font-size: 25px;
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.navbar ul li a:hover {
+    background-color: #4CAF50;
+}
+
+.navbar ul li a.active {
+    background-color: #4CAF50;
+}
+
+
+.option-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+.option-card.active {
+    background-color: darkgreen;
+    color: white;
+}
+
+.option-card.active:hover {
+    transform: scale(1);
+}
+
+footer {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: green;
+}
